@@ -30,3 +30,11 @@ deployment "production" {
   }
 }
 
+deployment "production-fonterra" {
+  inputs = {
+    regions        = ["ap-southeast-2", "ap-southeast-1"]
+    role_arn       = "arn:aws:iam::804453558652:role/tfstacks-role"
+    identity_token = identity_token.aws.jwt
+    default_tags   = { stacks-preview-example = "ambda-multi-account-stack" }
+  }
+}

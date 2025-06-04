@@ -1,8 +1,9 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
-variable "region" {
-  type = string
+variable "regions" {
+  type        = list(string)
+  description = "List of AWS regions to deploy to"
 }
 
 variable "identity_token" {
