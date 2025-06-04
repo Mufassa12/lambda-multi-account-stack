@@ -30,7 +30,7 @@ deployment "production" {
   }
 }
 
-deployment "production-fonterra" {
+deployment "production-aucklandcouncil" {
   inputs = {
     regions        = ["ap-southeast-2", "ap-southeast-1"]
     role_arn       = "arn:aws:iam::804453558652:role/tfstacks-role"
